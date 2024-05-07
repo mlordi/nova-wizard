@@ -78,6 +78,7 @@ class WizardController extends BaseController
     public function getFieldDefinition(string $step, NovaRequest $request)
     {
         $forms = config('nova-wizard');
+        dd($forms);
         if (!isset($forms[$step])) {
             return response()->json([
                 'message' => 'Step not found'
