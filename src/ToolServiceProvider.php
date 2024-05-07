@@ -70,7 +70,7 @@ class ToolServiceProvider extends ServiceProvider
      */
     protected function addFieldDefinitionRoute(): void
     {
-        Route::prefix('nova-api2')->group(function() {
+        Route::prefix('nova-api')->group(function() {
             Route::patch(
                 '/step/{step}/creation-fields',
                 [WizardController::class, 'getFieldDefinition']
